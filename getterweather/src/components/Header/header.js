@@ -1,4 +1,4 @@
 import React from "react";
-import "./style.css";
+import "./header.css";
 
 export default Header;
