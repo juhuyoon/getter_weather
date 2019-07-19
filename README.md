@@ -1,7 +1,7 @@
 # Getter Weather
 
  **It'll be less weather with getter weather!**   
-[getterweather.com]()
+[Website](https://getter-weather.herokuapp.com/)
 
 A one look weather app that averages conditions from multiple sources, so you don't feel the need to double check.    
 
@@ -17,19 +17,19 @@ node server.js
 
 ## Package Dependencies
 
-[React](https://facebook.github.io/create-react-app/)
-[Reactstrap](https://reactstrap.github.io/)
-[Express](https://expressjs.com/)
-[MongoDB](https://www.mongodb.com/)
-[Mongoose](https://mongoosejs.com/)
-[Axios](https://github.com/axios/axios)
+[React](https://facebook.github.io/create-react-app/)   
+[Reactstrap](https://reactstrap.github.io/)   
+[Express](https://expressjs.com/)   
+[MongoDB](https://www.mongodb.com/)   
+[Mongoose](https://mongoosejs.com/)   
+[Axios](https://github.com/axios/axios)   
 
 
 ## Weather API 
 
-[OpenWeather](https://openweathermap.org/api)
-[AccuWeather](https://rapidapi.com/stefan.skliarov/api/AccuWeather)
-[Apixu](https://www.apixu.com/login.aspx?ReturnUrl=%2fmy%2f)
+[OpenWeather](https://openweathermap.org/api)   
+[AccuWeather](https://rapidapi.com/stefan.skliarov/api/AccuWeather)   
+[Apixu](https://www.apixu.com/login.aspx?ReturnUrl=%2fmy%2f)   
 
 
 
