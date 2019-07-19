@@ -17,19 +17,19 @@ node server.js
 
 ## Package Dependencies
 
-[React](https://facebook.github.io/create-react-app/)
-[Reactstrap](https://reactstrap.github.io/)
-[Express](https://expressjs.com/)
-[MongoDB](https://www.mongodb.com/)
-[Mongoose](https://mongoosejs.com/)
-[Axios](https://github.com/axios/axios)
+[React](https://facebook.github.io/create-react-app/)   
+[Reactstrap](https://reactstrap.github.io/)   
+[Express](https://expressjs.com/)   
+[MongoDB](https://www.mongodb.com/)   
+[Mongoose](https://mongoosejs.com/)   
+[Axios](https://github.com/axios/axios)   
 
 
 ## Weather API 
 
-[OpenWeather](https://openweathermap.org/api)
-[AccuWeather](https://rapidapi.com/stefan.skliarov/api/AccuWeather)
-[Apixu](https://www.apixu.com/login.aspx?ReturnUrl=%2fmy%2f)
+[OpenWeather](https://openweathermap.org/api)   
+[AccuWeather](https://rapidapi.com/stefan.skliarov/api/AccuWeather)   
+[Apixu](https://www.apixu.com/login.aspx?ReturnUrl=%2fmy%2f)   
 
 
 
