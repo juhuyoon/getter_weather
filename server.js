@@ -1,10 +1,23 @@
 var mongoose = require("mongoose");
-const express = require("express")
+const express = require("express");
+const axios = require('axios');
 const app = express();
 
 app.get("/", (req, res) => {
     res.send("Server is working!")
 });
+
+app.get('/weather', function (req, res) {
+    
+    axios({
+        method: 'get',
+        url: 'http://api.apixu.com/v1/current.json?key=9a6d1cab9e4a4f8f8d4230629191807&q=Paris',
+        })
+        .then(function(response) {
+            console.log(response);
+        });
+    res.send("weather is working");
+  });
 
 app.listen(3000, () => {
     console.log("Listening on localhost:3000")
