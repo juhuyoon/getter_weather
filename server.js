@@ -36,7 +36,8 @@ db.once("open", function() {
 var weatherSchema = new mongoose.Schema({
   city: String,
   zip: Number,
-  temp: { minTemp: Number, maxTemp: Number },
+  minTemp: Number,
+  maxTemp: Number,
   condition: String
 });
 
