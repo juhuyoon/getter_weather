@@ -1,17 +1,17 @@
 import React, { Component } from "react";
-import Day1 from "../Content/Day1";
-import Day3 from "../Content/Day3";
+import Today from "../Content/Today";
+import Tomorrow from "../Content/Tomorrow";
 import Week1 from "../Content/Week1";
-import Week3 from "../Content/Week3";
+import Week2 from "./Week2";
 
 export default class index extends Component {
   render() {
     return (
       <div>
-        <Day1 />
-        <Day3 />
+        <Today />
+        <Tomorrow />
         <Week1 />
-        <Week3 />
+        <Week2 />
       </div>
     );
   }

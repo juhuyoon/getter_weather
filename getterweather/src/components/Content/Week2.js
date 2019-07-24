@@ -2,10 +2,10 @@ import React from "react";
 
 import { ListGroup, ListGroupItem } from "reactstrap";
 
-export default function Week3() {
+export default function Week2() {
   return (
     <div>
-      <h3>Week 3 </h3>
+      <h3>Week 2 </h3>
       <p>
         Be sure to{" "}
         <strong>
@@ -15,28 +15,28 @@ export default function Week3() {
       </p>
       <ListGroup>
         <ListGroupItem active tag="a" href="#" action>
-          Here's the forecast for Week 3
+          Here's the forecast for Week 2
         </ListGroupItem>
         <ListGroupItem tag="a" href="#" action>
-          Sunday - Week 3
+          Sunday - Week 2
         </ListGroupItem>
         <ListGroupItem tag="a" href="#" action>
-          Monday - Week 3
+          Monday - Week 2
         </ListGroupItem>
         <ListGroupItem tag="a" href="#" action>
-          Tuesday - Week 3
+          Tuesday - Week 2
         </ListGroupItem>
         <ListGroupItem tag="a" href="#" action>
-          Wednesday - Week 3
+          Wednesday - Week 2
         </ListGroupItem>
         <ListGroupItem disabled tag="a" href="#" action>
-          Thursday - Week 3
+          Thursday - Week 2
         </ListGroupItem>
         <ListGroupItem disabled tag="a" href="#" action>
-          Friday - Week 3
+          Friday - Week 2
         </ListGroupItem>
         <ListGroupItem disabled tag="a" href="#" action>
-          Saturday - Week 3
+          Saturday - Week 2
         </ListGroupItem>
       </ListGroup>
       <p />

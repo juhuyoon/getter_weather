@@ -1,22 +1,3 @@
-// import React from "react";
-
-// function Card({ icon, title, children }) {
-//   return (
-//     <div className="card mt-4">
-//       <div className="card-header">
-//         <h3>
-//           <strong>
-//             <i className={`fa fa-${icon}`} aria-hidden="true" /> {title}
-//           </strong>
-//         </h3>
-//       </div>
-//       <div className="card-body">{children}</div>
-//     </div>
-//   );
-// }
-
-// export default Card;
-
 import React from "react";
 import {
   Card,
@@ -28,7 +9,7 @@ import {
   Button
 } from "reactstrap";
 
-const Day1 = props => {
+const Tomorrow = props => {
   return (
     <div>
       <Card>
@@ -39,8 +20,8 @@ const Day1 = props => {
           alt="Card image cap"
         />
         <CardBody>
-          <CardTitle>Day 1</CardTitle>
-          <CardSubtitle>Day 1 Card Subtitle</CardSubtitle>
+          <CardTitle>Tomorrow</CardTitle>
+          <CardSubtitle>Tomorrow Card Subtitle</CardSubtitle>
           <CardText>
             Some quick example text to build on the card title and make up the
             bulk of the card's content.
@@ -52,4 +33,4 @@ const Day1 = props => {
   );
 };
 
-export default Day1;
+export default Tomorrow;
