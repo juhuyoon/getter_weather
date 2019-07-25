@@ -9,5 +9,10 @@ request(url, function (err, response, body) {
     console.log('error:', error);
   } else {
     console.log('body:', body);
+    var weather = JSON.parse(body);
+    console.log(weather);
+    var temp = `It's ${weather.current.temp_f} degrees in
+    ${weather.location.name}!`;
+    console.log(temp);
   }
 });

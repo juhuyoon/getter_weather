@@ -1,8 +1,9 @@
 const express = require('express')
+var router = express.Router();
 const axios = require('axios');
-var app = express()
 
-app.get('/apixu', function (req, res) {
+
+router.get('/apixu', function (req, res) {
     
     axios({
         method: 'get',
@@ -14,11 +15,11 @@ app.get('/apixu', function (req, res) {
     res.send("APIXU is working");
   });
 
-app.get('/openweather', function (req, res) {
+router.get('/openweather', function (req, res) {
     
     axios({
         method: 'get',
-        url: 'http://api.openweathermap.org/data/2.5/weather?q=atlanta&appid=0df9f64365060ae81c16eb4855a81df7',
+        url: 'http://api.openweathermap.org/data/2.5/weather?q=atlanta&routerid=0df9f64365060ae81c16eb4855a81df7',
         })
         .then(function(response) {
             console.log(response);
@@ -26,7 +27,7 @@ app.get('/openweather', function (req, res) {
     res.send("Openweather is working");
   });
 
-  app.get('/accuweather', function (req, res) {
+  router.get('/accuweather', function (req, res) {
     
     axios({
         method: 'get',
@@ -38,7 +39,7 @@ app.get('/openweather', function (req, res) {
     res.send("Accuweather is working");
   });
 
-  app.get('/darksky', function (req, res) {
+  router.get('/darksky', function (req, res) {
     
     axios({
         method: 'get',
@@ -49,3 +50,5 @@ app.get('/openweather', function (req, res) {
         });
     res.send("DarkSky is working");
   });
+
+module.exports = router;
