@@ -8,11 +8,13 @@ import {
   CardSubtitle,
   Button
 } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
+import { ListGroup, ListGroupItem } from "reactstrap";
 
 const Tomorrow = props => {
   return (
     <div>
-      <Card>
+      {/* <Card>
         <CardImg
           top
           width="100%"
@@ -28,7 +30,13 @@ const Tomorrow = props => {
           </CardText>
           <Button>Button</Button>
         </CardBody>
-      </Card>
+      </Card> */}
+
+      <Col>
+        <ListGroupItem tag="a" href="#" action>
+          Monday - This Week
+        </ListGroupItem>
+      </Col>
     </div>
   );
 };
