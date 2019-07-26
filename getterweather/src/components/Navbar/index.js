@@ -12,6 +12,16 @@ import {
   DropdownMenu,
   DropdownItem
 } from "reactstrap";
+import {
+  Col,
+  Row,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  FormText
+} from "reactstrap";
 
 export default class Navigation extends React.Component {
   constructor(props) {
@@ -33,6 +43,16 @@ export default class Navigation extends React.Component {
         <Navbar color="light" light expand="md">
           <NavbarBrand href="/">Getter Weather</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
+          <Form>
+            {/* <Col md={2}> */}
+            <FormGroup>
+              <Label for="exampleZip">Zip</Label>
+              <Input type="text" name="zip" id="exampleZip" />
+            </FormGroup>
+            <Button>Enter</Button>
+            {/* </Col> */}
+          </Form>
+
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>

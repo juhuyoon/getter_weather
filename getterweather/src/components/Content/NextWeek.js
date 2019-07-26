@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Container, Row, Col } from "reactstrap";
 import { ListGroup, ListGroupItem } from "reactstrap";
 
 export default function NextWeek() {
@@ -17,27 +17,49 @@ export default function NextWeek() {
         <ListGroupItem active tag="a" href="#" action>
           Here's the forecast for Next Week
         </ListGroupItem>
-        <ListGroupItem tag="a" href="#" action>
-          Sunday - Next Week
-        </ListGroupItem>
-        <ListGroupItem tag="a" href="#" action>
-          Monday - Next Week
-        </ListGroupItem>
-        <ListGroupItem tag="a" href="#" action>
-          Tuesday - Next Week
-        </ListGroupItem>
-        <ListGroupItem tag="a" href="#" action>
-          Wednesday - Next Week
-        </ListGroupItem>
-        <ListGroupItem disabled tag="a" href="#" action>
-          Thursday - Next Week
-        </ListGroupItem>
-        <ListGroupItem disabled tag="a" href="#" action>
-          Friday - Next Week
-        </ListGroupItem>
-        <ListGroupItem disabled tag="a" href="#" action>
-          Saturday - Next Week
-        </ListGroupItem>
+        <Row>
+          <Col>
+            <ListGroupItem tag="a" href="#" action>
+              Sunday - Next Week
+            </ListGroupItem>
+          </Col>
+
+          <Col>
+            <ListGroupItem tag="a" href="#" action>
+              Monday - Next Week
+            </ListGroupItem>
+          </Col>
+
+          <Col>
+            <ListGroupItem tag="a" href="#" action>
+              Tuesday - Next Week
+            </ListGroupItem>
+          </Col>
+
+          <Col>
+            <ListGroupItem tag="a" href="#" action>
+              Wednesday - Next Week
+            </ListGroupItem>
+          </Col>
+
+          <Col>
+            <ListGroupItem disabled tag="a" href="#" action>
+              Thursday - Next Week
+            </ListGroupItem>
+          </Col>
+
+          <Col>
+            <ListGroupItem disabled tag="a" href="#" action>
+              Friday - Next Week
+            </ListGroupItem>
+          </Col>
+
+          <Col>
+            <ListGroupItem disabled tag="a" href="#" action>
+              Saturday - Next Week
+            </ListGroupItem>
+          </Col>
+        </Row>
       </ListGroup>
       <p />
     </div>
