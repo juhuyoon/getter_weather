@@ -36,16 +36,16 @@ export default class Navigation extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/components/">Day 1</NavLink>
+                <NavLink href="/components/">Today</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Day 3</NavLink>
+                <NavLink href="/components/">Tomorrow</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Week 1</NavLink>
+                <NavLink href="/components/">This Week</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/components/">Week 2</NavLink>
+                <NavLink href="/components/">Next Week</NavLink>
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>

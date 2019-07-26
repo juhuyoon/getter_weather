@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import Today from "../Content/Today";
 import Tomorrow from "../Content/Tomorrow";
-import Week1 from "../Content/Week1";
-import Week2 from "./Week2";
+import ThisWeek from "./ThisWeek";
+import NextWeek from "./NextWeek";
 
 export default class index extends Component {
   render() {
@@ -10,8 +10,8 @@ export default class index extends Component {
       <div>
         <Today />
         <Tomorrow />
-        <Week1 />
-        <Week2 />
+        <ThisWeek />
+        <NextWeek />
       </div>
     );
   }
