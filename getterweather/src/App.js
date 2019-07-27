@@ -6,7 +6,7 @@ import Mainpage from "./components/Mainpage";
 export default class App extends Component {
   render() {
     return (
-      <div>
+      <div className="app">
         <Mainpage />
         {/* <LandingPage /> */}
       </div>
