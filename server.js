@@ -1,11 +1,6 @@
 var mongoose = require("mongoose");
 const express = require("express");
-const axios = require('axios');
 const app = express();
-var routes = require('./controllers/weatherController');
-var bodyParser = require('body-parser');
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.listen(3000, () => {
     console.log("Listening on localhost:3000")
@@ -14,7 +9,6 @@ app.listen(3000, () => {
 app.get("/", (req, res) => {
     res.send("Server is working!")
 });
-
    
 mongoose.connect("mongodb://localhost/test", {useNewUrlParser: true});
 
@@ -41,8 +35,8 @@ var Atlanta = new test({ city: 'Atlanta', zip: '30009', weather: 'cloudy'});
 
 Atlanta.speak();
 
-app.post("/addname", (req, res) => {
-    var myData = new test(req.body);
+app.get("/addname", (req, res) => {
+    var myData = Atlanta;
     console.log(myData);
     myData.save()
     .then(item => {
