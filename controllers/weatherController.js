@@ -10,7 +10,7 @@ router.get('/apixu', function (req, res) {
         url: 'http://api.apixu.com/v1/current.json?key=9a6d1cab9e4a4f8f8d4230629191807&q=Paris',
         })
         .then(function(response) {
-            console.log(response);
+            console.log(response.data.current);
         });
     res.send("APIXU is working");
   });

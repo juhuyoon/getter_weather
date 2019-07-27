@@ -1,6 +1,13 @@
 var mongoose = require("mongoose");
 const express = require("express");
+const bodyParser = require('body-parser');
 const app = express();
+const morgan = require('morgan');
+const router =  require('./controllers/weatherController')
+
+app.use(bodyParser.urlencoded({extended: false}));
+
+app.use(morgan('short'));
 
 app.listen(3000, () => {
     console.log("Listening on localhost:3000")
@@ -9,7 +16,9 @@ app.listen(3000, () => {
 app.get("/", (req, res) => {
     res.send("Server is working!")
 });
-   
+
+app.use(router);
+
 mongoose.connect("mongodb://localhost/test", {useNewUrlParser: true});
 
 var db = mongoose.connection;
