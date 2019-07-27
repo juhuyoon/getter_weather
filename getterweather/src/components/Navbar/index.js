@@ -40,7 +40,7 @@ export default class Navigation extends React.Component {
   render() {
     return (
       <div>
-        <Navbar color="light" light expand="md">
+        <Navbar color="light" light expand="md" fixed="top">
           <NavbarBrand href="/">Getter Weather</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Form>

@@ -5,6 +5,7 @@ import { ListGroup, ListGroupItem } from "reactstrap";
 export default function ThisWeek() {
   return (
     <div>
+      <br />
       <h3>This Week </h3>
       <p>
         Be sure to{" "}
