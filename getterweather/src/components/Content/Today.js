@@ -1,54 +1,35 @@
-// import React from "react";
-
-// function Card({ icon, title, children }) {
-//   return (
-//     <div className="card mt-4">
-//       <div className="card-header">
-//         <h3>
-//           <strong>
-//             <i className={`fa fa-${icon}`} aria-hidden="true" /> {title}
-//           </strong>
-//         </h3>
-//       </div>
-//       <div className="card-body">{children}</div>
-//     </div>
-//   );
-// }
-
-// export default Card;
-
 import React from "react";
-import {
-  Card,
-  CardImg,
-  CardText,
-  CardBody,
-  CardTitle,
-  CardSubtitle,
-  Button
-} from "reactstrap";
+import { Grid, Image } from "semantic-ui-react";
+import { Card, Icon } from "semantic-ui-react";
 
 const Today = props => {
   return (
-    <div>
-      <Card>
-        <CardImg
-          top
-          width="100%"
-          src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180"
-          alt="Card image cap"
-        />
-        <CardBody>
-          <CardTitle>Today</CardTitle>
-          <CardSubtitle>Today Card Subtitle</CardSubtitle>
-          <CardText>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </CardText>
-          <Button>Button</Button>
-        </CardBody>
-      </Card>
-    </div>
+    <Grid>
+      <Grid.Row>
+        <Grid.Column width={12} className="weather-img" />
+        <Grid.Column width={4}>
+          <Card className="today-panel">
+            <Card.Content>
+              <Card.Header>Today's Average</Card.Header>
+              <Card.Meta>
+                <span className="date">Metadata and all that jazz</span>
+              </Card.Meta>
+              <Card.Description>High:</Card.Description>
+              <Card.Description>Low:</Card.Description>
+              <Card.Description>Precipitation:</Card.Description>
+              <Card.Description>Humidity:</Card.Description>
+            </Card.Content>
+            <Card.Content extra>
+              <Icon name="user" />
+              <a href="https://iq.swackett.com/app/web/engine">
+                {/* change icon and send to new tab */}
+                What should I wear?
+              </a>
+            </Card.Content>
+          </Card>
+        </Grid.Column>
+      </Grid.Row>
+    </Grid>
   );
 };
 
