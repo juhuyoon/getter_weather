@@ -15,7 +15,7 @@ router.get('/apixu', function (req, res) {
     res.send("APIXU is working");
   });
 
-router.get('/openweather', function (req, res) {
+router.get('/openweather', function (req, res, err) {
     
     axios({
         method: 'get',
@@ -23,7 +23,8 @@ router.get('/openweather', function (req, res) {
         })
         .then(function(response) {
             console.log(response);
-        });
+        })
+        .catch(err);
     res.send("Openweather is working");
   });
 
@@ -39,7 +40,7 @@ router.get('/openweather', function (req, res) {
     res.send("Accuweather is working");
   });
 
-  router.get('/darksky', function (req, res) {
+  router.get('/darksky', function (req, res, err) {
     
     axios({
         method: 'get',
