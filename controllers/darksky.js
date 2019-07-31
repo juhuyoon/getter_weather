@@ -8,7 +8,7 @@ let lat = 33.749;
 let long = -84.388;
 let url = `https://api.darksky.net/forecast/112b5fa6d162582af407458fecc3d47d/${lat},${long}`;
 
-mongoose.connect("mongodb://localhost/test", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/weatherDB", {useNewUrlParser: true});
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -16,13 +16,13 @@ db.once("open", function() {
   console.log("Connected!");
 });
 
-var testSchema = new mongoose.Schema({
+var weatherSchema = new mongoose.Schema({
   condition: String,
   temp: String,
   humidity: String
 });
 
-var test = mongoose.model("test", testSchema);
+var forecast = mongoose.model("forecast", weatherSchema);
 
 request(url, function(err, body) {
   if (err) {
@@ -40,7 +40,7 @@ request(url, function(err, body) {
       humidity: today.humidity
     };
 
-    var document = new test(weatherObj);
+    var document = new forecast(weatherObj);
     document.save();
 
     console.log(weatherObj);
