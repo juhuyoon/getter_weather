@@ -10,10 +10,6 @@ request(url, function (err, response, body) {
     console.log('body:', body);
     var weather = JSON.parse(body);
     console.log(weather);
-    var temp = `${weather.DailyForecasts}`;
-    console.log(temp);
-    var temp2 = JSON.parse(temp);
-    console.log(temp2);
   }
 });
 
