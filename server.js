@@ -39,7 +39,7 @@ var test = mongoose.model("test", testSchema);
 
 var Atlanta = new test({ city: 'Atlanta', zip: '30009', weather: 'cloudy'});
 
-Atlanta.speak();
+//Atlanta.speak();
 
 app.post("/addname", (req, res) => {
     var myData = new test(req.body);
