@@ -34,7 +34,7 @@ var test = mongoose.model("test", testSchema);
 
 var Atlanta = new test({ city: 'Atlanta', zip: '30009', weather: 'cloudy'});
 
-Atlanta.speak();
+//Atlanta.speak();
 
 app.get("/addname", (req, res) => {
     var myData = Atlanta;
