@@ -1,4 +1,5 @@
 let request = require('request');
+var mongoose = require("mongoose");
 
 let apiKey = '0df9f64365060ae81c16eb4855a81df7';
 let city = '348181';
@@ -10,8 +11,7 @@ request(url, function (err, body) {
   } else {
     var weather = JSON.parse(body);
     console.log(weather);
-    var weatherObj = {
 
     }
   }
-});
+);
