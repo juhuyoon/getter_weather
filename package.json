@@ -4,8 +4,13 @@
   "description": "It'll be less weather with getter weather!",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "if-env NODE_ENV=production && npm run start:prod",
+    "start:prod": "node server.js",
+    "start:dev": "concurrently \"nodemon --ignore 'getterweather/*'\" \"npm run getterweather\"",
+    "client": "cd getterweather && npm run start",
+    "install": "cd getterweather && npm install",
+    "build": "cd getterweather && npm run build",
+    "heroku-postbuild": "npm run build"
   },
   "repository": {
     "type": "git",
@@ -23,6 +28,7 @@
     "body-parser": "^1.19.0",
     "cities": "^2.0.0",
     "express": "^4.17.1",
+    "if-env": "^1.0.4",
     "mongoose": "^5.6.4",
     "morgan": "^1.9.1",
     "react": "^16.8.6",

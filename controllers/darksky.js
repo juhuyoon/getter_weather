@@ -1,19 +1,52 @@
-let request = require('request');
+var mongoose = require("mongoose");
+const express = require("express");
+const app = express();
+let request = require("request");
 
-let lat = 33.7490;
-let long = -84.3880;
-let url = `https://api.darksky.net/forecast/112b5fa6d162582af407458fecc3d47d/${lat},${long}
+var userCity = "Atlanta";
+let lat = 33.749;
+let long = -84.388;
+let url = `https://api.darksky.net/forecast/112b5fa6d162582af407458fecc3d47d/${lat},${long}`;
 
-`
-request(url, function (err, response, body) {
-  if(err){
-    console.log('error:', error);
-  } else {
-    console.log('body:', body);
-    var weather = JSON.parse(body);
-    console.log(weather);
-    var temp = `It's ${weather.daily.summary}!`;
-    console.log(temp);
-  }
+mongoose.connect("mongodb://localhost/weatherDB", {useNewUrlParser: true});
+
+var db = mongoose.connection;
+db.on("error", console.error.bind(console, "connection error:"));
+db.once("open", function() {
+  console.log("Connected!");
 });
 
+var weatherSchema = new mongoose.Schema({
+  condition: String,
+  temp: String,
+  humidity: String
+});
+
+var forecast = mongoose.model("forecast", weatherSchema);
+
+request(url, function(err, body) {
+  if (err) {
+    console.log("error:", error);
+  } else {
+    var weather = JSON.parse(body);
+    console.log(weather);
+
+    var today = weather.currently;
+
+    var weatherObj = {
+      city: userCity,
+      condition: today.summary,
+      temp: today.temperature,
+      humidity: today.humidity
+    };
+
+    var document = new forecast(weatherObj);
+    document.save();
+
+    console.log(weatherObj);
+  }
+});
+<<<<<<< HEAD
+
+=======
+>>>>>>> 29dccf383101da36b9f33da6e3cba4b62451e2f3

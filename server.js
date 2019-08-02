@@ -3,14 +3,14 @@ const express = require("express");
 const bodyParser = require('body-parser');
 const app = express();
 const morgan = require('morgan');
-const router =  require('./controllers/weatherController')
+const router =  require('./controllers/weatherController');
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(morgan('short'));
 app.use(router);
+var PORT = 3000;
 
-
-app.listen(3000, () => {
-    console.log("Listening on localhost:3000")
+app.listen(PORT, () => {
+    console.log(`Listening on localhost:${PORT}`);
 });
 
 app.get("/", (req, res) => {
@@ -40,7 +40,7 @@ var test = mongoose.model("test", testSchema);
 
 var Atlanta = new test({ city: 'Atlanta', zip: '30009', weather: 'cloudy'});
 
-Atlanta.speak();
+//Atlanta.speak();
 
 app.get("/addname", (req, res) => {
     var myData = Atlanta;
