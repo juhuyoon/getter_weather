@@ -13,6 +13,7 @@ db.once("open", function() {
 });
 
 var weatherSchema = new mongoose.Schema({
+  city: String,
   condition: String,
   temp: String,
   humidity: String
