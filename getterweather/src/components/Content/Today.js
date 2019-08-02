@@ -6,7 +6,11 @@ const Today = props => {
   return (
     <Grid>
       <Grid.Row>
-        <Grid.Column width={12} className="weather-img" />
+        <Grid.Column
+          width={12}
+          // className="weather-img"
+          className="today-gradient"
+        />
         <Grid.Column width={4}>
           <Card className="today-panel">
             <Card.Content>

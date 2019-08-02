@@ -5,7 +5,7 @@ import { Icon } from "semantic-ui-react";
 const Tomorrow = props => {
   return (
     <div>
-      <Grid centered columns={2} className="hello">
+      <Grid centered columns={2} className="tomorrow-gradient">
         <Grid.Column>
           <Icon name="sun" size="massive" />
           85
