@@ -1,7 +1,13 @@
 var mongoose = require("mongoose");
 const express = require("express");
-const PORT = 3000;
+const bodyParser = require('body-parser');
 const app = express();
+const morgan = require('morgan');
+const router =  require('./controllers/weatherController');
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(morgan('short'));
+app.use(router);
+var PORT = 3000;
 
 app.listen(PORT, () => {
     console.log(`Listening on localhost:${PORT}`);
@@ -10,7 +16,7 @@ app.listen(PORT, () => {
 app.get("/", (req, res) => {
     res.send("Server is working!")
 });
-   
+
 mongoose.connect("mongodb://localhost/test", {useNewUrlParser: true});
 
 var db = mongoose.connection;

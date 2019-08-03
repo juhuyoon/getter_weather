@@ -46,3 +46,7 @@ request(url, function(err, body) {
     console.log(weatherObj);
   }
 });
+<<<<<<< HEAD
+
+=======
+>>>>>>> 29dccf383101da36b9f33da6e3cba4b62451e2f3

@@ -10,19 +10,21 @@ router.get('/apixu', function (req, res) {
         url: 'http://api.apixu.com/v1/current.json?key=9a6d1cab9e4a4f8f8d4230629191807&q=Paris',
         })
         .then(function(response) {
-            console.log(response);
+            console.log(response.data.current);
         });
     res.send("APIXU is working");
   });
 
-router.get('/openweather', function (req, res) {
+router.get('/openweather', function (req, res, err) {
     
     axios({
         method: 'get',
-        url: 'http://api.openweathermap.org/data/2.5/weather?q=atlanta&routerid=0df9f64365060ae81c16eb4855a81df7',
+        url: 'http://api.openweathermap.org/data/2.5/weather?q=Atlanta&units=imperial&appid=0df9f64365060ae81c16eb4855a81df7',
         })
         .then(function(response) {
             console.log(response);
+        }).catch(err => {
+            console.log(err);
         });
     res.send("Openweather is working");
   });
@@ -39,7 +41,7 @@ router.get('/openweather', function (req, res) {
     res.send("Accuweather is working");
   });
 
-  router.get('/darksky', function (req, res) {
+  router.get('/darksky', function (req, res, err) {
     
     axios({
         method: 'get',
