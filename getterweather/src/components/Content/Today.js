@@ -4,7 +4,12 @@ import { Container } from "semantic-ui-react";
 const Today = props => {
   return (
     <div>
-      <Grid columns="equal" className="tomorrow-gradient">
+      <Grid columns="equal" className="today-gradient">
+        <div>
+          <Header as="h1" className="main-content-title">
+            Today
+          </Header>
+        </div>
         <Grid.Row>
           <Grid.Column>
             <Segment>
@@ -99,7 +104,7 @@ const Today = props => {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Source pulled from: DarkSky</div>
+                <div>Source pulled from: Dark Sky</div>
               </List>
             </Segment>
           </Grid.Column>
@@ -144,7 +149,7 @@ const Today = props => {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Source pulled from: OpenWeather</div>
+                <div>Source pulled from: Open Weather Map</div>
               </List>
             </Segment>
           </Grid.Column>

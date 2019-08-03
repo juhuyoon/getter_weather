@@ -22,7 +22,7 @@
   top: 0;
   width: 100%;
   height: 600px;
-  background-image: linear-gradient(#56ccf2, #2f80ed);
+  background-image: linear-gradient(#cee397, #8db1ab);
 }
 
 .tomorrow-gradient {
@@ -30,7 +30,11 @@
   top: 0;
   width: 100%;
   height: 600px;
-  background-image: linear-gradient(#70e1f5, #ffd194);
+  background-image: linear-gradient(#f4e04d, #587792);
+}
+
+.main-content-title {
+  color: red;
 }
 
 /* .ui.centered.grid {

@@ -6,6 +6,11 @@ const Tomorrow = props => {
   return (
     <div>
       <Grid columns="equal" className="tomorrow-gradient">
+        <div>
+          <Header as="h1" className="main-content-title">
+            Tomorrow
+          </Header>
+        </div>
         <Grid.Row>
           <Grid.Column>
             <Segment>
@@ -48,7 +53,7 @@ const Tomorrow = props => {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Api name: ie DarkSky</div>
+                <div>Api name: ie Dark Sky</div>
               </List>
             </Segment>
           </Grid.Column>
@@ -93,7 +98,7 @@ const Tomorrow = props => {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Source pulled from: OpenWeather</div>
+                <div>Source pulled from: Open Weather Map</div>
               </List>
             </Segment>
           </Grid.Column>
