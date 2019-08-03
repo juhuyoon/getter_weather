@@ -17,9 +17,10 @@ db.once("open", function() {
 });
 
 var weatherSchema = new mongoose.Schema({
+  city: String,
   condition: String,
-  temp: String,
-  humidity: String
+  temp: Number,
+  humidity: Number
 });
 
 var forecast = mongoose.model("forecast", weatherSchema);
@@ -28,7 +29,7 @@ request(url, function(err, body) {
   if (err) {
     console.log("error:", error);
   } else {
-    var weather = JSON.parse(body);
+    var weather = JSON.parse(body.body);
     console.log(weather);
 
     var today = weather.currently;

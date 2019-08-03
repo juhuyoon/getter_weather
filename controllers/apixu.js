@@ -15,8 +15,8 @@ db.once("open", function() {
 var weatherSchema = new mongoose.Schema({
   city: String,
   condition: String,
-  temp: String,
-  humidity: String
+  temp: Number,
+  humidity: Number
 });
 
 var forecast = mongoose.model("forecast", weatherSchema);
