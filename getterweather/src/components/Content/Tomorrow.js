@@ -1,6 +1,5 @@
 import React from "react";
-import { Grid, Image, Segment, Icon, List } from "semantic-ui-react";
-// import { Icon } from "semantic-ui-react";
+import { Header, Grid, Image, Segment, Icon, List } from "semantic-ui-react";
 import { Container } from "semantic-ui-react";
 
 const Tomorrow = props => {
@@ -11,6 +10,11 @@ const Tomorrow = props => {
           <Grid.Column>
             <Segment>
               <List>
+                <div>
+                  <Header size="huge">88</Header>
+                  <Icon name="sun outline" size="huge" />
+                </div>
+                <br />
                 <List.Item as="a">
                   <Icon name="arrow up" />
                   <List.Content>
@@ -29,70 +33,165 @@ const Tomorrow = props => {
                     </List.Description>
                   </List.Content>
                 </List.Item>
+                <List.Item as="a">
+                  <Icon name="h" />
+                  <List.Content>
+                    <List.Header>Humidity</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="product hunt" />
+                  <List.Content>
+                    <List.Header>Precipitation</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <br />
+                <div>Api name: ie DarkSky</div>
               </List>
             </Segment>
           </Grid.Column>
           <Grid.Column>
             <Segment>
-              {" "}
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa strong. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                dictum felis eu pede link mollis pretium. Integer tincidunt.
-                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-                ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-              </p>
+              <List>
+                <div>
+                  <Header size="huge">88</Header>
+                  <Icon name="sun outline" size="huge" />
+                </div>
+                <br />
+                <List.Item as="a">
+                  <Icon name="arrow up" />
+                  <List.Content>
+                    <List.Header>High</List.Header>
+                    <List.Description>
+                      Insert the high temperature here
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="arrow down" />
+                  <List.Content>
+                    <List.Header>Low</List.Header>
+                    <List.Description>
+                      Insert the low temperature here
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="h" />
+                  <List.Content>
+                    <List.Header>Humidity</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="product hunt" />
+                  <List.Content>
+                    <List.Header>Precipitation</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <br />
+                <div>Source pulled from: OpenWeather</div>
+              </List>
             </Segment>
           </Grid.Column>
           <Grid.Column>
             <Segment>
-              {" "}
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa strong. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                dictum felis eu pede link mollis pretium. Integer tincidunt.
-                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-                ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-              </p>
+              <List>
+                <div>
+                  <Header size="huge">88</Header>
+                  <Icon name="sun outline" size="huge" />
+                </div>
+                <br />
+                <List.Item as="a">
+                  <Icon name="arrow up" />
+                  <List.Content>
+                    <List.Header>High</List.Header>
+                    <List.Description>
+                      Insert the high temperature here
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="arrow down" />
+                  <List.Content>
+                    <List.Header>Low</List.Header>
+                    <List.Description>
+                      Insert the low temperature here
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="h" />
+                  <List.Content>
+                    <List.Header>Humidity</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="product hunt" />
+                  <List.Content>
+                    <List.Header>Precipitation</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <br />
+                <div>Source pulled from: Apixu</div>
+              </List>
             </Segment>
           </Grid.Column>
           <Grid.Column>
             <Segment>
-              {" "}
-              <p>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-                commodo ligula eget dolor. Aenean massa strong. Cum sociis
-                natoque penatibus et magnis dis parturient montes, nascetur
-                ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu,
-                pretium quis, sem. Nulla consequat massa quis enim. Donec pede
-                justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim
-                justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam
-                dictum felis eu pede link mollis pretium. Integer tincidunt.
-                Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate
-                eleifend tellus. Aenean leo ligula, porttitor eu, consequat
-                vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in,
-                viverra quis, feugiat a, tellus. Phasellus viverra nulla ut
-                metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam
-                ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi.
-              </p>
+              <List>
+                <div>
+                  <Header size="huge">Average Temperature: 88</Header>
+                  {/* <Icon name="sun outline" size="huge" /> */}
+                </div>
+                <br />
+                <List.Item as="a">
+                  <Icon name="arrow up" />
+                  <List.Content>
+                    <List.Header>High</List.Header>
+                    <List.Description>
+                      Insert the high temperature here
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="arrow down" />
+                  <List.Content>
+                    <List.Header>Low</List.Header>
+                    <List.Description>
+                      Insert the low temperature here
+                    </List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="h" />
+                  <List.Content>
+                    <List.Header>Humidity</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <List.Item as="a">
+                  <Icon name="product hunt" />
+                  <List.Content>
+                    <List.Header>Precipitation</List.Header>
+                    <List.Description>example</List.Description>
+                  </List.Content>
+                </List.Item>
+                <Icon name="user" />
+                <a
+                  href="https://iq.swackett.com/app/web/engine"
+                  target="_blank"
+                >
+                  {/* change icon and send to new tab */}
+                  What should I wear?
+                </a>
+                <br />
+              </List>
             </Segment>
           </Grid.Column>
         </Grid.Row>
