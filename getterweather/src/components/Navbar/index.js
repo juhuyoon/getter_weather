@@ -30,16 +30,6 @@ export default class MenuExampleInvertedSecondary extends Component {
             active={activeItem === "tomorrow"}
             onClick={this.handleItemClick}
           />
-          <Menu.Item
-            name="This Week"
-            active={activeItem === "thisweek"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Next Week"
-            active={activeItem === "nextweek"}
-            onClick={this.handleItemClick}
-          />
         </Menu>
       </Segment>
     );
