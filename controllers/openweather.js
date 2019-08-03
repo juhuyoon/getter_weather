@@ -3,7 +3,10 @@ var mongoose = require("mongoose");
 
 let apiKey = '0df9f64365060ae81c16eb4855a81df7';
 let city = 'Atlanta';
-let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
+let base = 'http://api.openweathermap.org/data/2.5/weather?q=';
+let bit = '&units=imperial&appid=';
+let url = base + city + bit + apiKey;
+
 
 mongoose.connect("mongodb://localhost/weatherDB", {useNewUrlParser: true});
 
