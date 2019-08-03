@@ -17,9 +17,9 @@ var weatherSchema = new mongoose.Schema({
   condition: String,
   temp: Number,
   humidity: Number
-});
+}, { collection: 'weather' });
 
-var forecast = mongoose.model("forecast", weatherSchema);
+var forecast = mongoose.model("weather", weatherSchema);
 
 request(url, function (err, response, body) {
   if(err){
