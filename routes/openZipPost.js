@@ -1,22 +1,26 @@
-app.get('/search-location-weather', (req, res) => {
-    //build api URL with user zip
-    const baseUrl = 'http://api.openweathermap.org/data/2.5/weather?zip=';
-    //ENTER YOUR API KEY HERE (make sure to no include < >)
-    const apiId = '&appid=<YOUR API KEY GOES HERE>&units=imperial';
-     
-    const userLocation = (url1, url2, zipcode) => {
-       let newUrl = url1 + zipcode + url2;
-       return newUrl;
-    };	
-     
-    const apiUrl = userLocation(baseUrl, apiId, zipcode);
-     
-    fetch(apiUrl)
-    .then(res => res.json())
-    .then(data => {
-       res.send({ data });
-    })
-    .catch(err => {
-       res.redirect('/error');
-    });
- })
+function myFunction() {
+
+   var request = require('request');
+   // var input1 = document.getElementById('Atlanta');
+   var input1 = 'Atlanta';
+   var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
+   var apikey = '&APPID=0df9f64365060ae81c16eb4855a81df7';
+   var sum = api + input1.value + apikey;
+
+   request = new XMLHttpRequest();
+
+   request.open('GET', sum, true);
+   request.onload = function () {
+
+       var data = JSON.parse(this.response);
+       if (request.status >= 200 && request.status < 400) {
+           console.log(data);
+       } else {
+           console.log(input1.value);
+       }
+   }
+
+   request.send();
+}
+
+myFunction()

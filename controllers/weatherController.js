@@ -19,12 +19,13 @@ router.get('/openweather', function (req, res, err) {
     
     axios({
         method: 'get',
-        url: 'http://api.openweathermap.org/data/2.5/weather?q=atlanta&routerid=0df9f64365060ae81c16eb4855a81df7',
+        url: 'http://api.openweathermap.org/data/2.5/weather?q=Atlanta&units=imperial&appid=0df9f64365060ae81c16eb4855a81df7',
         })
         .then(function(response) {
             console.log(response);
-        })
-        .catch(err);
+        }).catch(err => {
+            console.log(err);
+        });
     res.send("Openweather is working");
   });
 
