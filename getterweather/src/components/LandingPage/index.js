@@ -17,7 +17,7 @@ const index = props => {
         <Header as="h2" color="teal" textAlign="center">
           <p> Welcome to Getter Weather </p>
         </Header>
-        <p> Your one stop shop for all the accurate weather and thangs </p>
+        <p>Here you will find the most accurate weather. </p>
         <Form size="large">
           <Segment stacked>
             <Form.Input placeholder="ZIP Code" />

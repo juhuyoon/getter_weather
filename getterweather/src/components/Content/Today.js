@@ -3,7 +3,7 @@ import { Header, Grid, Image, Segment, Icon, List } from "semantic-ui-react";
 import { Container } from "semantic-ui-react";
 const Today = props => {
   return (
-    <div>
+    <div id="content">
       <Grid columns="equal" className="today-gradient">
         <div>
           <Header as="h1" className="main-content-title">

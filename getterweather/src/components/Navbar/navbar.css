@@ -1,6 +1,8 @@
-/* .navbar {
+.ui.inverted.segment {
+  background: #587792 !important;
+  border-radius: 0px;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
-} */
+  z-index: 9999;
+}

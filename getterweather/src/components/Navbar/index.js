@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Menu, Segment } from "semantic-ui-react";
-import { Form } from "semantic-ui-react";
+import { Form, Input } from "semantic-ui-react";
+import "../Navbar/navbar.css";
 
 export default class MenuExampleInvertedSecondary extends Component {
   state = { activeItem: "home" };
@@ -12,14 +13,12 @@ export default class MenuExampleInvertedSecondary extends Component {
 
     return (
       <Segment inverted>
-        <Form>
-          <Form.Group widths="equal">
-            <Form.Input fluid label="ZIP code" placeholder="ZIP Code" />
-          </Form.Group>
-
-          <Form.Button>Submit</Form.Button>
-        </Form>
-        <Menu inverted pointing secondary>
+        <Menu fixed pointing secondary>
+          <Menu.Item
+            name="Getter Weather"
+            active={activeItem === "getter weather"}
+            onClick={this.handleItemClick}
+          />
           <Menu.Item
             name="Today"
             active={activeItem === "today"}
@@ -30,6 +29,12 @@ export default class MenuExampleInvertedSecondary extends Component {
             active={activeItem === "tomorrow"}
             onClick={this.handleItemClick}
           />
+          <Menu.Item position="right">
+            <Input
+              action={{ type: "submit", content: "Go" }}
+              placeholder="City Name"
+            />
+          </Menu.Item>
         </Menu>
       </Segment>
     );
