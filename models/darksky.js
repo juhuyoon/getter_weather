@@ -17,18 +17,20 @@ db.once("open", function() {
 });
 
 var weatherSchema = new mongoose.Schema({
+  _id: Number,
+  city: String,
   condition: String,
-  temp: String,
-  humidity: String
-});
+  temp: Number,
+  humidity: Number
+}, { collection: 'weather' });
 
-var forecast = mongoose.model("forecast", weatherSchema);
+var forecast = mongoose.model("weather", weatherSchema);
 
 request(url, function(err, body) {
   if (err) {
     console.log("error:", error);
   } else {
-    var weather = JSON.parse(body);
+    var weather = JSON.parse(body.body);
     console.log(weather);
 
     var today = weather.currently;
@@ -46,7 +48,3 @@ request(url, function(err, body) {
     console.log(weatherObj);
   }
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 29dccf383101da36b9f33da6e3cba4b62451e2f3

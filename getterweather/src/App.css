@@ -4,28 +4,11 @@
   height: 600px;
 }
 
-/* .div.column {
-  padding: 14px;
-} */
-
-/* .four.wide.column {
-  padding-left: 0px;
-  padding-right: 0;
-  padding-right: 0px;
-} */
-
-/* .today-panel {
+.today-panel {
   height: 600px;
-} */
-
-.today-gradient {
-  top: 0;
-  width: 100%;
-  height: 600px;
-  background-image: linear-gradient(#56ccf2, #2f80ed);
 }
 
-.tomorrow-gradient {
+.hello {
   /* position: fixed; */
   top: 0;
   width: 100%;
