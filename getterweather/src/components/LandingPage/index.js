@@ -50,6 +50,7 @@ export default class index extends Component {
                 color="blue"
                 fluid
                 size="medium"
+                id="city-name-input"
               >
                 Go
               </Button>

@@ -23,6 +23,7 @@ export default class MenuExampleInvertedSecondary extends Component {
               name="Getter Weather"
               active={activeItem === "getter weather"}
               onClick={this.handleItemClick}
+              className="navbar-title"
             />
 
             <Menu.Item
@@ -30,17 +31,21 @@ export default class MenuExampleInvertedSecondary extends Component {
               href="#today"
               active={activeItem === "today"}
               onClick={this.handleItemClick}
+              className="navbar-titles"
             />
             <Menu.Item
               name="Tomorrow"
               href="#tomorrow"
               active={activeItem === "tomorrow"}
               onClick={this.handleItemClick}
+              className="navbar-titles"
             />
             <Menu.Item position="right">
               <Input
                 action={{ type: "submit", content: "Go" }}
                 placeholder="City Name"
+                className="navbar-titles"
+                id="city-name-input"
               />
             </Menu.Item>
             {/* <AutoComplete /> */}
