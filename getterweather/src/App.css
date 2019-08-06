@@ -1,9 +1,76 @@
-.weather-img {
+/* .List.Header {
+  font-family: "Raleway, 800";
+}
+* {
+  font-family: "Raleway", sans-serif;
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+#mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-titles {
+  font-family: "Raleway", sans-serif !important;
+  font-weight: bold !important;
+  color: white !important;
+}
+
+.navbar-title {
+  font-family: "Rubik Mono One", sans-serif !important;
+  font-size: 15 !important;
+  /* text-align: center; */
+  color: white !important;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.main-content-title {
+  font-family: "Rubik Mono One", sans-serif !important;
+  font-size: 45px !important;
+  text-align: center;
+  color: white !important;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+.ui.grid {
+  margin-left: 0px !important;
+}
+
+.today-gradient {
+  /* top: 0; */
+  /* width: 100%; */
+  /* height: 600px; */
+  background-image: url("../src/assets/images/weather-background-today.png");
+  background-size: contain;
+  /* linear-gradient(#cee397, #8db1ab); */
+}
+
+#today {
+  margin-top: 76px;
+  padding: 25px 0;
+  height: 750px;
+}
+/* .weather-img {
   background-image: url("../src/assets/images/clearsunny.jpeg");
   background-repeat: no-repeat;
   height: 600px;
+} */
+
+#landing-page {
+  background-image: url("../src/assets/images/getterweatherlandingpage.gif") !important;
+  background-size: cover;
 }
 
+.cardHeaderTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* .div.column {
   padding: 14px;
 } */
@@ -18,19 +85,20 @@
   height: 600px;
 } */
 
-.today-gradient {
-  top: 0;
-  width: 100%;
-  height: 600px;
-  background-image: linear-gradient(#56ccf2, #2f80ed);
+#tomorrow {
+  margin-top: 76px;
+  padding: 25px 0;
+  height: 750px;
 }
 
 .tomorrow-gradient {
   /* position: fixed; */
-  top: 0;
-  width: 100%;
-  height: 600px;
-  background-image: linear-gradient(#70e1f5, #ffd194);
+  /* top: 0; */
+  /* width: 100%;
+  height: 600px; */
+  background-size: contain;
+  background-image: url("../src/assets/images/weather-background-tomorrow.png");
+  /* linear-gradient(#8db1ab, #587792); */
 }
 
 /* .ui.centered.grid {
