@@ -1,16 +1,35 @@
-.List.Header {
+/* .List.Header {
   font-family: "Raleway, 800";
 }
 * {
   font-family: "Raleway", sans-serif;
+} */
+html {
+  scroll-behavior: smooth;
+}
+
+#mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-title {
+  font-family: "Rubik Mono One", sans-serif !important;
+  font-size: 45px !important;
+  text-align: center;
+  color: white !important;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
 }
 
 .ui.grid {
   margin-left: 0px !important;
 }
 
-#content {
-  margin-top: 90px;
+#today {
+  margin-top: 76px;
+  padding: 25px 0;
+  height: 750px;
 }
 .weather-img {
   background-image: url("../src/assets/images/clearsunny.jpeg");
@@ -18,6 +37,16 @@
   height: 600px;
 }
 
+#landing-page {
+  background-image: url("../src/assets/images/getterweatherlandingpage.gif") !important;
+  background-size: cover;
+}
+
+.cardHeaderTemp {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /* .div.column {
   padding: 14px;
 } */
@@ -34,21 +63,22 @@
 
 .today-gradient {
   /* top: 0; */
-  width: 100%;
-  height: 600px;
-  background-image: linear-gradient(#cee397, #8db1ab);
+  /* width: 100%; */
+  /* height: 600px; */
+  background-image: url("../src/assets/images/ezgif.com-gif-maker.gif");
+  background-size: contain;
+
+  /* linear-gradient(#cee397, #8db1ab); */
 }
 
 .tomorrow-gradient {
   /* position: fixed; */
   /* top: 0; */
-  width: 100%;
-  height: 600px;
-  background-image: linear-gradient(#8db1ab, #587792);
-}
-
-.main-content-title {
-  color: red;
+  /* width: 100%;
+  height: 600px; */
+  background-size: contain;
+  background-image: url("../src/assets/images/movingweather1.png");
+  /* linear-gradient(#8db1ab, #587792); */
 }
 
 /* .ui.centered.grid {
