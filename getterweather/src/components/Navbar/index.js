@@ -24,6 +24,13 @@ import React, { Component } from "react";
 //   FormText
 // } from "reactstrap";
 import { Menu, Segment } from "semantic-ui-react";
+<<<<<<< HEAD
+=======
+import { Form, Input } from "semantic-ui-react";
+import { Link } from "react-router-dom";
+import "../Navbar/navbar.css";
+import AutoComplete from "../AutoCompleteInput/AutoComplete";
+>>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
 
 // export default class Navigation extends React.Component {
 //   constructor(props) {
@@ -48,6 +55,7 @@ export default class MenuExampleInvertedSecondary extends Component {
     const { activeItem } = this.state;
 
     return (
+<<<<<<< HEAD
       <Segment inverted>
         <Menu inverted pointing secondary>
           <Menu.Item
@@ -72,6 +80,46 @@ export default class MenuExampleInvertedSecondary extends Component {
           />
         </Menu>
       </Segment>
+=======
+      <div style={{}}>
+        <Segment inverted>
+          <Menu fixed pointing secondary>
+            <Menu.Item
+              as={Link}
+              to="/"
+              name="Getter Weather"
+              active={activeItem === "getter weather"}
+              onClick={this.handleItemClick}
+              className="navbar-title"
+            />
+
+            <Menu.Item
+              name="Today"
+              href="#today"
+              active={activeItem === "today"}
+              onClick={this.handleItemClick}
+              className="navbar-titles"
+            />
+            <Menu.Item
+              name="Tomorrow"
+              href="#tomorrow"
+              active={activeItem === "tomorrow"}
+              onClick={this.handleItemClick}
+              className="navbar-titles"
+            />
+            <Menu.Item position="right">
+              <Input
+                action={{ type: "submit", content: "Go" }}
+                placeholder="City Name"
+                className="navbar-titles"
+                id="city-name-input"
+              />
+            </Menu.Item>
+            {/* <AutoComplete /> */}
+          </Menu>
+        </Segment>
+      </div>
+>>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
     );
   }
 }
