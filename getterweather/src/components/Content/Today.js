@@ -1,7 +1,25 @@
-import React from "react";
-import { Header, Grid, Image, Segment, Icon, List } from "semantic-ui-react";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { Header, Grid, Image, Segment, Icon, List, Card } from "semantic-ui-react";
 import { Container } from "semantic-ui-react";
-const Today = props => {
+import axios from "axios";
+class Today extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      city: null,
+      temp: null
+    };
+  };
+  componentDidMount() {
+    fetch("http://api.apixu.com/v1/current.json?key=9a6d1cab9e4a4f8f8d4230629191807&q=Atlanta")
+    .then(response => response.json())
+    .then(response => this.setState({ 
+      city: response.location.name,
+      temp: response.current.temp_f,
+     }))
+}
+  render() {
   return (
     <div id="today" className="today-gradient">
       <Header
@@ -17,7 +35,7 @@ const Today = props => {
           <Segment>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge">Average: 88</Header>
+                <Header size="huge">{this.state.city}</Header>
                 {/* <Icon name="sun outline" size="huge" /> */}
               </div>
               <br />
@@ -206,6 +224,7 @@ const Today = props => {
       </Grid>
     </div>
   );
+ }
 };
 
 export default Today;

@@ -25,7 +25,7 @@ request(url, function (err, response, body) {
     console.log('error:', error);
   } else {
     var weather = JSON.parse(body);
-    //console.log(weather);
+    console.log(weather);
 
     var weatherObj = {
       city: weather.location.name,
