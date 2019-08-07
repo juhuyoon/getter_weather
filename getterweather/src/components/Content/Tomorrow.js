@@ -29,7 +29,7 @@ const Tomorrow = props => {
 
       <Grid relaxed="very" columns={4} padded centered>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ opacity: "0.5" }}>
             <List>
               <div className="cardHeaderTemp">
                 <Header

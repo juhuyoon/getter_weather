@@ -159,11 +159,17 @@ class Today extends Component {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Source pulled from: Dark Sky</div>
+                <div
+                  style={{
+                    fontSize: "11px"
+                  }}
+                >
+                  Source pulled from: Dark Sky
+                </div>
               </List>
             </Segment>
           </Grid.Column>
-          <Grid.Column>
+          <Grid.Column style={{ opacity: "0.5" }}>
             <Segment>
               <List>
                 <div className="cardHeaderTemp">
@@ -215,7 +221,13 @@ class Today extends Component {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Source pulled from: Open Weather Map</div>
+                <div
+                  style={{
+                    fontSize: "11px"
+                  }}
+                >
+                  Source pulled from: Open Weather Map
+                </div>
               </List>
             </Segment>
           </Grid.Column>
@@ -271,7 +283,13 @@ class Today extends Component {
                   </List.Content>
                 </List.Item>
                 <br />
-                <div>Source pulled from: AccuWeather</div>
+                <div
+                  style={{
+                    fontSize: "11px"
+                  }}
+                >
+                  Source pulled from: AccuWeather
+                </div>
               </List>
             </Segment>
           </Grid.Column>

@@ -104,12 +104,31 @@ html {
   /* linear-gradient(#8db1ab, #587792); */
 }
 
-/* .ui.centered.grid {
-  background-color: #70e1f5;
-} */
-/* .navBar {
-  position: fixed;
-  top: 0;
+.ui.stacked.segment {
+  /* padding-bottom: 1.4em; */
+  margin: auto;
+}
+
+element.style {
+  max-width: 350px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 75px;
+  margin-left: 111px;
+  margin-right: 111px;
+}
+.ui.stacked.segment:after,
+.ui.stacked.segment:before,
+.ui.stacked.segments:after,
+.ui.stacked.segments:before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  /* border-top: none; */
+  background: rgba(0, 0, 0, 0.03);
   width: 100%;
-  #ffd194
-} */
+  height: 6px;
+  visibility: visible;
+}

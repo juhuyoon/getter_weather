@@ -29,7 +29,7 @@ export default class index extends Component {
       <Grid
         textAlign="center"
         style={{ height: "100vh" }}
-        verticalAlign="middle"
+        // verticalAlign="middle"
         id="landing-page"
       >
         <Grid.Column style={{ maxWidth: 600 }}>
@@ -41,7 +41,8 @@ export default class index extends Component {
                 "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
               fontSize: "35px",
               margin: 0,
-              paddingBottom: "15px"
+              paddingBottom: "15px",
+              paddingTop: "100px"
             }}
           >
             <p>Getter Weather </p>
@@ -61,10 +62,10 @@ export default class index extends Component {
             <Segment
               stacked
               style={{
-                maxWidth: 350,
+                maxWidth: 250,
                 justifyContent: "center",
                 alignItems: "center",
-                marginTop: "75px"
+                marginTop: "10px"
               }}
             >
               <Form.Input
@@ -77,7 +78,7 @@ export default class index extends Component {
                 to="/getterweather"
                 color="yellow"
                 fluid
-                size="medium"
+                size="small"
                 id="city-name-input"
               >
                 Go
