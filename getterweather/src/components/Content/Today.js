@@ -41,22 +41,26 @@ class Today extends Component {
             <Segment>
               <List>
                 <div className="cardHeaderTemp">
+                  Average <br />
                   <Header
                     style={{
                       fontFamily: '"Rubik Mono One", sans-serif',
                       color: "white",
                       textShadow:
                         "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
-                      fontSize: "17px"
+                      fontSize: "35px",
+                      margin: 0,
+                      paddingTop: "20px",
+                      paddingBottom: "20px"
                     }}
                   >
-                    Average: 88
+                    68
                   </Header>
                   {/* <Header size="huge">Average: 88</Header> */}
                   {/* <Icon name="sun outline" size="huge" /> */}
                 </div>
                 <br />
-                <List.Item as="a">
+                <List.Item as="a" className="card-content">
                   <Icon name="arrow up" />
                   <List.Content>
                     <List.Header>High</List.Header>
@@ -90,12 +94,12 @@ class Today extends Component {
                     </List.Description>
                   </List.Content>
                 </List.Item>
+                <br />
                 <Icon name="user" />
                 <a
                   href="https://iq.swackett.com/app/web/engine"
                   target="_blank"
                 >
-                  {/* change icon and send to new tab */}
                   What should I wear?
                 </a>
                 <br />
@@ -106,14 +110,23 @@ class Today extends Component {
             <Segment>
               <List>
                 <div className="cardHeaderTemp">
-                  <Header size="huge" style={{ margin: 0 }}>
+                  <Header
+                    style={{
+                      fontFamily: '"Rubik Mono One", sans-serif',
+                      color: "white",
+                      textShadow:
+                        "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                      fontSize: "35px",
+                      margin: 0
+                    }}
+                  >
                     88
                   </Header>
                   <Image src={sunnyImage} size="tiny" />
                   {/* <Icon name="sun outline" size="huge" /> */}
                 </div>
                 <br />
-                <List.Item as="a">
+                <List.Item as="a" className="card-content">
                   <Icon name="arrow up" />
                   <List.Content>
                     <List.Header>High</List.Header>
@@ -154,13 +167,22 @@ class Today extends Component {
             <Segment>
               <List>
                 <div className="cardHeaderTemp">
-                  <Header size="huge" style={{ margin: 0 }}>
+                  <Header
+                    style={{
+                      fontFamily: '"Rubik Mono One", sans-serif',
+                      color: "white",
+                      textShadow:
+                        "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                      fontSize: "35px",
+                      margin: 0
+                    }}
+                  >
                     88
                   </Header>
                   <Image src={sleetImage} size="tiny" />
                 </div>
                 <br />
-                <List.Item as="a">
+                <List.Item as="a" className="card-content">
                   <Icon name="arrow up" />
                   <List.Content>
                     <List.Header>High</List.Header>
@@ -201,13 +223,22 @@ class Today extends Component {
             <Segment>
               <List>
                 <div className="cardHeaderTemp">
-                  <Header size="huge" style={{ margin: 0 }}>
+                  <Header
+                    style={{
+                      fontFamily: '"Rubik Mono One", sans-serif',
+                      color: "white",
+                      textShadow:
+                        "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                      fontSize: "35px",
+                      margin: 0
+                    }}
+                  >
                     88
                   </Header>
                   <Image src={thunderstormImage} size="tiny" />
                 </div>
                 <br />
-                <List.Item as="a">
+                <List.Item as="a" className="card-content">
                   <Icon name="arrow up" />
                   <List.Content>
                     <List.Header>High</List.Header>

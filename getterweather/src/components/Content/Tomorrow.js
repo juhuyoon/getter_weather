@@ -171,10 +171,21 @@ const Tomorrow = props => {
           <Segment>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge" style={{ margin: 0 }}>
-                  Average Temperature: 88
+                Average <br />
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0,
+                    paddingTop: "20px",
+                    paddingBottom: "20px"
+                  }}
+                >
+                  92
                 </Header>
-                {/* <Icon name="sun outline" size="huge" /> */}
               </div>
               <br />
               <List.Item as="a">
@@ -209,6 +220,7 @@ const Tomorrow = props => {
                   <List.Description>example</List.Description>
                 </List.Content>
               </List.Item>
+              <br />
               <Icon name="user" />
               <a href="https://iq.swackett.com/app/web/engine" target="_blank">
                 {/* change icon and send to new tab */}
