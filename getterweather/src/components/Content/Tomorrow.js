@@ -32,11 +32,22 @@ const Tomorrow = props => {
           <Segment>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge">88</Header>
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0
+                  }}
+                >
+                  84
+                </Header>
                 <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -69,7 +80,14 @@ const Tomorrow = props => {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Api name: ie Dark Sky</div>
+              <div
+                className="card-content"
+                style={{
+                  fontSize: "11px"
+                }}
+              >
+                Source pulled from: ie Dark Sky
+              </div>
             </List>
           </Segment>
         </Grid.Column>
@@ -77,13 +95,22 @@ const Tomorrow = props => {
           <Segment>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge" style={{ margin: 0 }}>
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0
+                  }}
+                >
                   88
                 </Header>
                 <Image src={rainImage} size="tiny" />
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -116,7 +143,14 @@ const Tomorrow = props => {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Source pulled from: Open Weather Map</div>
+              <div
+                className="card-content"
+                style={{
+                  fontSize: "11px"
+                }}
+              >
+                Source pulled from: Open Weather Map
+              </div>
             </List>
           </Segment>
         </Grid.Column>
@@ -124,13 +158,23 @@ const Tomorrow = props => {
           <Segment>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge" style={{ margin: 0 }}>
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0
+                  }}
+                >
+                  {" "}
                   88
                 </Header>
                 <Image src={sunnyImage} size="tiny" />
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -163,7 +207,14 @@ const Tomorrow = props => {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Source pulled from: AccuWeather</div>
+              <div
+                className="card-content"
+                style={{
+                  fontSize: "11px"
+                }}
+              >
+                Source pulled from: AccuWeather
+              </div>
             </List>
           </Segment>
         </Grid.Column>
@@ -188,7 +239,7 @@ const Tomorrow = props => {
                 </Header>
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
