@@ -1,6 +1,20 @@
 import React from "react";
-import { Header, Grid, Image, Segment, Icon, List } from "semantic-ui-react";
-import { Container } from "semantic-ui-react";
+import {
+  Header,
+  Grid,
+  Image,
+  Segment,
+  Icon,
+  List,
+  Container
+} from "semantic-ui-react";
+import cloudyImage from "../../assets/images/icons/cloudy.png";
+import rainImage from "../../assets/images/icons/rain.png";
+import sleetImage from "../../assets/images/icons/sleet.png";
+import snowImage from "../../assets/images/icons/snow.png";
+import suncloudImage from "../../assets/images/icons/sun-cloud.png";
+import sunnyImage from "../../assets/images/icons/sunny.png";
+import thunderstormImage from "../../assets/images/icons/thunderstorm.png";
 
 const Tomorrow = props => {
   return (
@@ -19,7 +33,7 @@ const Tomorrow = props => {
             <List>
               <div className="cardHeaderTemp">
                 <Header size="huge">88</Header>
-                <Icon name="sun outline" size="huge" />
+                <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
               <List.Item as="a">
@@ -66,7 +80,7 @@ const Tomorrow = props => {
                 <Header size="huge" style={{ margin: 0 }}>
                   88
                 </Header>
-                <Icon name="sun outline" size="huge" />
+                <Image src={rainImage} size="tiny" />
               </div>
               <br />
               <List.Item as="a">
@@ -113,7 +127,7 @@ const Tomorrow = props => {
                 <Header size="huge" style={{ margin: 0 }}>
                   88
                 </Header>
-                <Icon name="sun outline" size="huge" />
+                <Image src={sunnyImage} size="tiny" />
               </div>
               <br />
               <List.Item as="a">
@@ -149,7 +163,7 @@ const Tomorrow = props => {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Source pulled from: Apixu</div>
+              <div>Source pulled from: AccuWeather</div>
             </List>
           </Segment>
         </Grid.Column>

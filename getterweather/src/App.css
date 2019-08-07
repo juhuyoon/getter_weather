@@ -47,7 +47,6 @@ html {
   /* height: 600px; */
   background-image: url("../src/assets/images/weather-background-today.png");
   background-size: contain;
-  /* linear-gradient(#cee397, #8db1ab); */
 }
 
 #today {
@@ -55,11 +54,6 @@ html {
   padding: 25px 0;
   height: 750px;
 }
-/* .weather-img {
-  background-image: url("../src/assets/images/clearsunny.jpeg");
-  background-repeat: no-repeat;
-  height: 600px;
-} */
 
 #landing-page {
   background-image: url("../src/assets/images/getterweatherlandingpage.gif") !important;
