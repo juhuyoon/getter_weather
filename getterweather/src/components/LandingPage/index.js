@@ -32,13 +32,41 @@ export default class index extends Component {
         verticalAlign="middle"
         id="landing-page"
       >
-        <Grid.Column style={{ maxWidth: 450 }}>
-          <Header as="h2" color="teal" textAlign="center">
-            <p> Welcome to Getter Weather </p>
+        <Grid.Column style={{ maxWidth: 600 }}>
+          <Header
+            style={{
+              fontFamily: '"Rubik Mono One", sans-serif',
+              color: "white",
+              textShadow:
+                "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+              fontSize: "35px",
+              margin: 0,
+              paddingBottom: "15px"
+            }}
+          >
+            <p>Getter Weather </p>
           </Header>
-          <p>Here you will find the most accurate weather. </p>
-          <Form size="large">
-            <Segment stacked>
+          <div
+            className="card-content"
+            style={{
+              fontSize: "20px",
+              color: "white",
+              paddingBottom: "15px"
+            }}
+          >
+            A one look weather app that averages conditions from multiple
+            sources, so you don't feel the need to double check.
+          </div>
+          <Form size="small">
+            <Segment
+              stacked
+              style={{
+                maxWidth: 350,
+                justifyContent: "center",
+                alignItems: "center",
+                marginTop: "75px"
+              }}
+            >
               <Form.Input
                 placeholder="City"
                 value={this.state.search}
@@ -47,7 +75,7 @@ export default class index extends Component {
               <Button
                 as={Link}
                 to="/getterweather"
-                color="blue"
+                color="yellow"
                 fluid
                 size="medium"
                 id="city-name-input"
