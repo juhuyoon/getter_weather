@@ -94,7 +94,7 @@ render() {
                       paddingBottom: "20px"
                     }}
                   >
-                    68
+                    88.35
                   </Header>
               </div>
               <br />
