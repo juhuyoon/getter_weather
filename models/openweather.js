@@ -3,10 +3,7 @@ var mongoose = require("mongoose");
 
 let apiKey = '0df9f64365060ae81c16eb4855a81df7';
 let city = 'Atlanta';
-let base = 'http://api.openweathermap.org/data/2.5/weather?q=';
-let bit = '&units=imperial&appid=';
-let url = base + city + bit + apiKey;
-
+let url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
 
 mongoose.connect("mongodb://localhost/weatherDB", {useNewUrlParser: true});
 
@@ -17,12 +14,14 @@ db.once("open", function() {
 });
 
 var weatherSchema = new mongoose.Schema({
+  _id: Number,
+  city: String,
   condition: String,
-  temp: String,
-  humidity: String
-});
+  temp: Number,
+  humidity: Number
+}, { collection: 'weather' });
 
-var forecast = mongoose.model("forecast", weatherSchema);
+var forecast = mongoose.model("weather", weatherSchema);
 
 request(url, function (err, body) {
   if(err){
@@ -35,7 +34,8 @@ request(url, function (err, body) {
       city: weather.name,
       condition: weather.weather[0].main,
       temp: weather.main.temp,
-      humidity: weather.main.humidity
+      humidity: weather.main.humidity,
+      max: weather.main.temp_max
     };
 
     var document = new forecast(weatherObj);

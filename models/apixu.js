@@ -13,12 +13,14 @@ db.once("open", function() {
 });
 
 var weatherSchema = new mongoose.Schema({
+  _id: Number,
+  city: String,
   condition: String,
-  temp: String,
-  humidity: String
-});
+  temp: Number,
+  humidity: Number
+}, { collection: 'weather' });
 
-var forecast = mongoose.model("forecast", weatherSchema);
+var forecast = mongoose.model("weather", weatherSchema);
 
 request(url, function (err, response, body) {
   if(err){
@@ -31,7 +33,8 @@ request(url, function (err, response, body) {
       city: weather.location.name,
       condition: weather.current.condition.text,
       temp: weather.current.temp_f,
-      humidity: weather.current.humidity
+      humidity: weather.current.humidity,
+      f: weather.current.feelslike_f
     };
 
     var document = new forecast(weatherObj);
