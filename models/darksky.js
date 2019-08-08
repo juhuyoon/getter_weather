@@ -42,9 +42,5 @@ request(url, function(err, body) {
       humidity: today.humidity
     };
 
-    var document = new forecast(weatherObj);
-    document.save();
-
-    console.log(weatherObj);
   }
 });

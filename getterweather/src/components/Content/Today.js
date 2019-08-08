@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { Header, Grid, Image, Segment, Icon, List, Card } from "semantic-ui-react";
 import { Container } from "semantic-ui-react";
 import axios from "axios";
-
 class Today extends Component {
   constructor(props) {
     super(props);

@@ -34,7 +34,8 @@ request(url, function (err, body) {
       city: weather.name,
       condition: weather.weather[0].main,
       temp: weather.main.temp,
-      humidity: weather.main.humidity
+      humidity: weather.main.humidity,
+      max: weather.main.temp_max
     };
 
     var document = new forecast(weatherObj);

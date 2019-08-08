@@ -27,13 +27,14 @@ request(url, function (err, response, body) {
     console.log('error:', error);
   } else {
     var weather = JSON.parse(body);
-    //console.log(weather);
+    console.log(weather);
 
     var weatherObj = {
       city: weather.location.name,
       condition: weather.current.condition.text,
       temp: weather.current.temp_f,
-      humidity: weather.current.humidity
+      humidity: weather.current.humidity,
+      f: weather.current.feelslike_f
     };
 
     var document = new forecast(weatherObj);
