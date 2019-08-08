@@ -23,8 +23,6 @@ class Today extends Component {
       city: null,
       tempmax: null,
       tempmin: null,
-      humidity: null,
-      precip: null,
       city2: null,
       temp2max: null,
       temp2min: null,
@@ -54,14 +52,12 @@ class Today extends Component {
        humidity2: response.main.humidity
      }));
 
-     fetch("https://api.darksky.net/forecast/112b5fa6d162582af407458fecc3d47d/33.749,-84.388")
+     fetch("http://dataservice.accuweather.com/forecasts/v1/daily/1day/348181?apikey=aIM0XKfnNBCyI8Ya7Q5Shb1RYTpCL3Od")
      .then(response => response.json())
      .then( response => this.setState({
        city: "Atlanta",
-       tempmax: response.body.daily.temperatureHigh,
-       tempmin: response.body.daily.temperatureLow,
-       humidity: response.body.daily.humidity,
-       precip: response.body.daily.precipIntensity
+       tempmax: response.DailyForecasts[0].Temperature.Maximum.Value,
+       tempmin: response.DailyForecasts[0].Temperature.Minimum.Value
      }));
 }
 
@@ -177,20 +173,6 @@ render() {
                   <List.Description>
                   {this.state.tempmin}
                   </List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item as="a">
-                <Icon name="h" />
-                <List.Content>
-                  <List.Header>Humidity</List.Header>
-                  <List.Description>{this.state.humidity}</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item as="a">
-                <Icon name="product hunt" />
-                <List.Content>
-                  <List.Header>Precipitation</List.Header>
-                  <List.Description>{this.state.precip}</List.Description>
                 </List.Content>
               </List.Item>
               <br />
