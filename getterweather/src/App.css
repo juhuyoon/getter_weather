@@ -37,6 +37,10 @@ html {
     1px 1px 0 #000;
 }
 
+.card-content {
+  font-family: "Raleway", sans-serif !important;
+}
+
 .ui.grid {
   margin-left: 0px !important;
 }
@@ -47,7 +51,6 @@ html {
   /* height: 600px; */
   background-image: url("../src/assets/images/weather-background-today.png");
   background-size: contain;
-  /* linear-gradient(#cee397, #8db1ab); */
 }
 
 #today {
@@ -55,11 +58,6 @@ html {
   padding: 25px 0;
   height: 750px;
 }
-/* .weather-img {
-  background-image: url("../src/assets/images/clearsunny.jpeg");
-  background-repeat: no-repeat;
-  height: 600px;
-} */
 
 #landing-page {
   background-image: url("../src/assets/images/getterweatherlandingpage.gif") !important;
@@ -67,6 +65,11 @@ html {
 }
 
 .cardHeaderTemp {
+  font-family: "Rubik Mono One", sans-serif !important;
+  /* color: white !important; */
+  /* text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000; */
+  font-size: 17px !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,12 +89,12 @@ html {
 } */
 
 #tomorrow {
-  margin-top: 76px;
+  /* margin-top: 76px; */
   padding: 25px 0;
   height: 750px;
 }
 
-.hello {
+.tomorrow-gradient {
   /* position: fixed; */
   /* top: 0; */
   /* width: 100%;
@@ -101,12 +104,31 @@ html {
   /* linear-gradient(#8db1ab, #587792); */
 }
 
-/* .ui.centered.grid {
-  background-color: #70e1f5;
-} */
-/* .navBar {
-  position: fixed;
-  top: 0;
+.ui.stacked.segment {
+  /* padding-bottom: 1.4em; */
+  margin: auto;
+}
+
+element.style {
+  max-width: 350px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 75px;
+  margin-left: 111px;
+  margin-right: 111px;
+}
+.ui.stacked.segment:after,
+.ui.stacked.segment:before,
+.ui.stacked.segments:after,
+.ui.stacked.segments:before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  /* border-top: none; */
+  background: rgba(0, 0, 0, 0.03);
   width: 100%;
-  #ffd194
-} */
+  height: 6px;
+  visibility: visible;
+}

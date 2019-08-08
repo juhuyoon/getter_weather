@@ -3,6 +3,13 @@ import ReactDOM from "react-dom";
 import { Header, Grid, Image, Segment, Icon, List, Card } from "semantic-ui-react";
 import { Container } from "semantic-ui-react";
 import axios from "axios";
+import cloudyImage from "../../assets/images/icons/cloudy.png";
+import rainImage from "../../assets/images/icons/rain.png";
+import sleetImage from "../../assets/images/icons/sleet.png";
+import snowImage from "../../assets/images/icons/snow.png";
+import suncloudImage from "../../assets/images/icons/sun-cloud.png";
+import sunnyImage from "../../assets/images/icons/sunny.png";
+import thunderstormImage from "../../assets/images/icons/thunderstorm.png";
 var  accuUrl = 'http://dataservice.accuweather.com/forecasts/v1/daily/1day/348181?apikey=aIM0XKfnNBCyI8Ya7Q5Shb1RYTpCL3Od';
 var  apixuUrl = 'http://api.apixu.com/v1/current.json?key=9a6d1cab9e4a4f8f8d4230629191807&q=Atlanta';
 var openUrl = 'http://api.openweathermap.org/data/2.5/weather?q=Atlanta&units=imperial&appid=0df9f64365060ae81c16eb4855a81df7';
@@ -28,7 +35,8 @@ class Tomorrow extends Component {
       openLow: null,
       openHumidity: null,
       openPrecipitation: null,
-      openFeelslike: null
+      openFeelslike: null,
+      avgHumidity: null
     };
   };
 
@@ -58,8 +66,8 @@ class Tomorrow extends Component {
           openHumidity: res3.main.humidity,
           openPrecipitation: res3.weather[0].main,
           openFeelslike: res3.main.temp,
-          avgTemp: ((((((res1.DailyForecasts[0].Temperature.Maximum.Value) + (res1.DailyForecasts[0].Temperature.Minimum.Value))/2)) + (res2.current.feelslike_f) + (res3.main.temp))/3)
-
+          avgTemp: ((((((res1.DailyForecasts[0].Temperature.Maximum.Value) + (res1.DailyForecasts[0].Temperature.Minimum.Value))/2)) + (res2.current.feelslike_f) + (res3.main.temp))/3).toFixed(2),
+          avgHumidity: (((res2.current.humidity) + (res3.main.humidity))/2)
       }));
 
 }
@@ -76,14 +84,25 @@ class Tomorrow extends Component {
 
       <Grid relaxed="very" columns={4} padded centered>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge">{this.state.accuFeelslike}</Header>
-                <Icon name="sun outline" size="huge" />
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0
+                  }}
+                >
+                 {this.state.accuFeelslike}
+                </Header>
+                <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -116,21 +135,37 @@ class Tomorrow extends Component {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Source: AccuWeather</div>
+              <div
+                className="card-content"
+                style={{
+                  fontSize: "11px"
+                }}
+              >
+                Source pulled from: AccuWeather
+              </div>
             </List>
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge" style={{ margin: 0 }}>
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0
+                  }}
+                >
                   {this.state.openFeelslike}
                 </Header>
-                <Icon name="sun outline" size="huge" />
+                <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -163,21 +198,37 @@ class Tomorrow extends Component {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Source pulled from: Open Weather Map</div>
+              <div
+                className="card-content"
+                style={{
+                  fontSize: "11px"
+                }}
+              >
+                Source pulled from: Open Weather Map
+              </div>
             </List>
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge" style={{ margin: 0 }}>
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0
+                  }}
+                >
                   {this.state.apixuFeelslike}
                 </Header>
-                <Icon name="sun outline" size="huge" />
+                <Image src={sunnyImage} size="tiny" />
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -210,21 +261,39 @@ class Tomorrow extends Component {
                 </List.Content>
               </List.Item>
               <br />
-              <div>Source pulled from: Apixu</div>
+              <div
+                className="card-content"
+                style={{
+                  fontSize: "11px"
+                }}
+              >
+                Source pulled from: Apixu
+              </div>
             </List>
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge" style={{ margin: 0 }}>
-                  Average Temperature: {this.state.avgTemp}
+                Average <br />
+                <Header
+                  style={{
+                    fontFamily: '"Rubik Mono One", sans-serif',
+                    color: "white",
+                    textShadow:
+                      "-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, -1px 1px 0 #000",
+                    fontSize: "35px",
+                    margin: 0,
+                    paddingTop: "20px",
+                    paddingBottom: "20px"
+                  }}
+                >
+                  {this.state.avgTemp}
                 </Header>
-                {/* <Icon name="sun outline" size="huge" /> */}
               </div>
               <br />
-              <List.Item as="a">
+              <List.Item as="a" className="card-content">
                 <Icon name="arrow up" />
                 <List.Content>
                   <List.Header>High</List.Header>
@@ -246,7 +315,7 @@ class Tomorrow extends Component {
                 <Icon name="h" />
                 <List.Content>
                   <List.Header>Humidity</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{this.state.avgHumidity}</List.Description>
                 </List.Content>
               </List.Item>
               <List.Item as="a">
@@ -256,6 +325,7 @@ class Tomorrow extends Component {
                   <List.Description>example</List.Description>
                 </List.Content>
               </List.Item>
+              <br />
               <Icon name="user" />
               <a href="https://iq.swackett.com/app/web/engine" target="_blank">
                 {/* change icon and send to new tab */}
