@@ -8,10 +8,8 @@ request(url, function(err, body) {
     console.log('error:');
   } else {
     var bodyParse = JSON.parse(body.body);
-    console.log(bodyParse);
 
-    var weather = bodyParse.DailyForecasts[0]
-
+    var weather = bodyParse.DailyForecasts[0].Temperature.Minimum.Value
     console.log(weather)
 
   };
