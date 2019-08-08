@@ -35,7 +35,8 @@ class Tomorrow extends Component {
       openLow: null,
       openHumidity: null,
       openPrecipitation: null,
-      openFeelslike: null
+      openFeelslike: null,
+      avgHumidity: null
     };
   };
 
@@ -65,8 +66,8 @@ class Tomorrow extends Component {
           openHumidity: res3.main.humidity,
           openPrecipitation: res3.weather[0].main,
           openFeelslike: res3.main.temp,
-          avgTemp: ((((((res1.DailyForecasts[0].Temperature.Maximum.Value) + (res1.DailyForecasts[0].Temperature.Minimum.Value))/2)) + (res2.current.feelslike_f) + (res3.main.temp))/3).toFixed(2)
-
+          avgTemp: ((((((res1.DailyForecasts[0].Temperature.Maximum.Value) + (res1.DailyForecasts[0].Temperature.Minimum.Value))/2)) + (res2.current.feelslike_f) + (res3.main.temp))/3).toFixed(2),
+          avgHumidity: (((res2.current.humidity) + (res3.main.humidity))/2)
       }));
 
 }
@@ -161,7 +162,7 @@ class Tomorrow extends Component {
                 >
                   {this.state.openFeelslike}
                 </Header>
-                <Image src={rainImage} size="tiny" />
+                <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
               <List.Item as="a" className="card-content">
@@ -266,7 +267,7 @@ class Tomorrow extends Component {
                   fontSize: "11px"
                 }}
               >
-                Source pulled from: AccuWeather
+                Source pulled from: Apixu
               </div>
             </List>
           </Segment>
@@ -314,7 +315,7 @@ class Tomorrow extends Component {
                 <Icon name="h" />
                 <List.Content>
                   <List.Header>Humidity</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{this.state.avgHumidity}</List.Description>
                 </List.Content>
               </List.Item>
               <List.Item as="a">

@@ -220,7 +220,7 @@ render() {
                   >
                     88
                   </Header>
-                  <Image src={sleetImage} size="tiny" />
+                  <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
               <List.Item as="a" className="card-content">
@@ -267,7 +267,7 @@ render() {
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
               <Header
@@ -282,7 +282,7 @@ render() {
                   >
                     88
                   </Header>
-                  <Image src={thunderstormImage} size="tiny" />
+                  <Image src={suncloudImage} size="tiny" />
               </div>
               <br />
               <List.Item as="a" className="card-content">
