@@ -65,7 +65,7 @@ class Tomorrow extends Component {
           openHumidity: res3.main.humidity,
           openPrecipitation: res3.weather[0].main,
           openFeelslike: res3.main.temp,
-          avgTemp: ((((((res1.DailyForecasts[0].Temperature.Maximum.Value) + (res1.DailyForecasts[0].Temperature.Minimum.Value))/2)) + (res2.current.feelslike_f) + (res3.main.temp))/3)
+          avgTemp: ((((((res1.DailyForecasts[0].Temperature.Maximum.Value) + (res1.DailyForecasts[0].Temperature.Minimum.Value))/2)) + (res2.current.feelslike_f) + (res3.main.temp))/3).toFixed(2)
 
       }));
 
@@ -288,7 +288,7 @@ class Tomorrow extends Component {
                     paddingBottom: "20px"
                   }}
                 >
-                  Average Temperature: {this.state.avgTemp}
+                  {this.state.avgTemp}
                 </Header>
               </div>
               <br />
