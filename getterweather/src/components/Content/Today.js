@@ -38,7 +38,7 @@ class Today extends Component {
 
         <Grid relaxed="very" columns={4} padded centered>
           <Grid.Column>
-            <Segment>
+            <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
               <List>
                 <div className="cardHeaderTemp">
                   Average <br />
@@ -107,7 +107,7 @@ class Today extends Component {
             </Segment>
           </Grid.Column>
           <Grid.Column>
-            <Segment>
+            <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
               <List>
                 <div className="cardHeaderTemp">
                   <Header
@@ -169,8 +169,8 @@ class Today extends Component {
               </List>
             </Segment>
           </Grid.Column>
-          <Grid.Column style={{ opacity: "0.5" }}>
-            <Segment>
+          <Grid.Column>
+            <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
               <List>
                 <div className="cardHeaderTemp">
                   <Header
@@ -232,7 +232,7 @@ class Today extends Component {
             </Segment>
           </Grid.Column>
           <Grid.Column>
-            <Segment>
+            <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
               <List>
                 <div className="cardHeaderTemp">
                   <Header

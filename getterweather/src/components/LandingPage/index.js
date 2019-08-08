@@ -10,10 +10,12 @@ import {
 } from "semantic-ui-react";
 import { Card, Icon } from "semantic-ui-react";
 import { Link } from "react-router-dom";
+import AutoComplete from "../AutoCompleteInput/AutoComplete";
 
 export default class index extends Component {
   state = {
-    search: ""
+    search: "",
+    selectedOption: null
   };
 
   handleSearch(event) {
@@ -25,6 +27,7 @@ export default class index extends Component {
     // set the state for search results
   }
   render() {
+    const { selectedOption } = this.state;
     return (
       <Grid
         textAlign="center"
@@ -68,11 +71,12 @@ export default class index extends Component {
                 marginTop: "10px"
               }}
             >
-              <Form.Input
+              <AutoComplete />
+              {/* <Form.Input
                 placeholder="City"
                 value={this.state.search}
                 onChange={event => this.handleSearch(event)}
-              />
+              /> */}
               <Button
                 as={Link}
                 to="/getterweather"
@@ -85,6 +89,16 @@ export default class index extends Component {
               </Button>
             </Segment>
           </Form>
+          <div
+            className="card-content"
+            style={{
+              fontSize: "15px",
+              color: "white",
+              paddingTop: "300px"
+            }}
+          >
+            Proudly built using React.js by Tyler, Orion, and Gabriel
+          </div>
         </Grid.Column>
       </Grid>
     );

@@ -29,7 +29,7 @@ const Tomorrow = props => {
 
       <Grid relaxed="very" columns={4} padded centered>
         <Grid.Column>
-          <Segment style={{ opacity: "0.5" }}>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
                 <Header
@@ -92,7 +92,7 @@ const Tomorrow = props => {
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
                 <Header
@@ -155,7 +155,7 @@ const Tomorrow = props => {
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
                 <Header
@@ -219,7 +219,7 @@ const Tomorrow = props => {
           </Segment>
         </Grid.Column>
         <Grid.Column>
-          <Segment>
+          <Segment style={{ background: "rgba(255, 255, 255, 0.7)" }}>
             <List>
               <div className="cardHeaderTemp">
                 Average <br />
