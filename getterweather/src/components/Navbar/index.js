@@ -24,13 +24,10 @@ import React, { Component } from "react";
 //   FormText
 // } from "reactstrap";
 import { Menu, Segment } from "semantic-ui-react";
-<<<<<<< HEAD
-=======
 import { Form, Input } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import "../Navbar/navbar.css";
 import AutoComplete from "../AutoCompleteInput/AutoComplete";
->>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
 
 // export default class Navigation extends React.Component {
 //   constructor(props) {
@@ -55,32 +52,6 @@ export default class MenuExampleInvertedSecondary extends Component {
     const { activeItem } = this.state;
 
     return (
-<<<<<<< HEAD
-      <Segment inverted>
-        <Menu inverted pointing secondary>
-          <Menu.Item
-            name="Today"
-            active={activeItem === "today"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Tomorrow"
-            active={activeItem === "tomorrow"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="This Week"
-            active={activeItem === "thisweek"}
-            onClick={this.handleItemClick}
-          />
-          <Menu.Item
-            name="Next Week"
-            active={activeItem === "nextweek"}
-            onClick={this.handleItemClick}
-          />
-        </Menu>
-      </Segment>
-=======
       <div style={{}}>
         <Segment inverted>
           <Menu fixed pointing secondary>
@@ -119,7 +90,6 @@ export default class MenuExampleInvertedSecondary extends Component {
           </Menu>
         </Segment>
       </div>
->>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
     );
   }
 }

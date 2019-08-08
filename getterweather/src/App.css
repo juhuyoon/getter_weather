@@ -66,10 +66,6 @@ html {
   background-size: cover;
 }
 
-<<<<<<< HEAD
-.today-panel {
-  height: 600px;
-=======
 .cardHeaderTemp {
   display: flex;
   justify-content: center;
@@ -93,7 +89,6 @@ html {
   margin-top: 76px;
   padding: 25px 0;
   height: 750px;
->>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
 }
 
 .hello {

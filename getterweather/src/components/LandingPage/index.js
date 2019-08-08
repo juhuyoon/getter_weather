@@ -1,13 +1,4 @@
 import React, { Component } from "react";
-<<<<<<< HEAD
-
-export default class index extends Component {
-  render() {
-    return (
-      <div>
-        <p>This is the landing page.</p>
-      </div>
-=======
 import {
   Button,
   Form,
@@ -67,7 +58,6 @@ export default class index extends Component {
           </Form>
         </Grid.Column>
       </Grid>
->>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
     );
   }
 }

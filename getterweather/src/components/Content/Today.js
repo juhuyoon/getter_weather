@@ -1,37 +1,60 @@
-import React from "react";
-import { Grid, Image } from "semantic-ui-react";
-import { Card, Icon } from "semantic-ui-react";
+import React, { Component } from "react";
+import ReactDOM from "react-dom";
+import { Header, Grid, Image, Segment, Icon, List, Card } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
+import axios from "axios";
 
-const Today = props => {
+class Today extends Component {
+  constructor(props) {
+    super(props);
+    this.state= {
+      city: null,
+      tempmax: null,
+      tempmin: null,
+      humidity: null,
+      precip: null,
+      city2: null,
+      temp2max: null,
+      temp2min: null,
+      humidity2: null,
+      city3: null,
+      temp3: null,
+      humidity3: null
+    };
+  };
+
+  componentDidMount() {
+    fetch("http://api.apixu.com/v1/current.json?key=9a6d1cab9e4a4f8f8d4230629191807&q=Atlanta")
+    .then(response => response.json())
+    .then(response => this.setState({ 
+      city3: response.location.name,
+      temp3: response.current.temp_f,
+      humidity3: response.current.humidity,
+      precipitation3: response.current.precip_in
+     }));
+
+     fetch("http://api.openweathermap.org/data/2.5/weather?q=Atlanta&units=imperial&appid=0df9f64365060ae81c16eb4855a81df7")
+     .then(response => response.json())
+     .then(response => this.setState({
+       city2: response.name,
+       temp2max: response.main.temp_max,
+       temp2min: response.main.temp_min,
+       humidity2: response.main.humidity
+     }));
+
+     fetch("https://api.darksky.net/forecast/112b5fa6d162582af407458fecc3d47d/33.749,-84.388")
+     .then(response => response.json())
+     .then( response => this.setState({
+       city: "Atlanta",
+       tempmax: response.body.daily.temperatureHigh,
+       tempmin: response.body.daily.temperatureLow,
+       humidity: response.body.daily.humidity,
+       precip: response.body.daily.precipIntensity
+     }));
+}
+
+render() {
   return (
-<<<<<<< HEAD
-    <Grid>
-      <Grid.Row>
-        <Grid.Column width={12} className="weather-img" />
-        <Grid.Column width={4}>
-          <Card className="today-panel">
-            <Card.Content>
-              <Card.Header>Today's Average</Card.Header>
-              <Card.Meta>
-                <span className="date">Metadata and all that jazz</span>
-              </Card.Meta>
-              <Card.Description>High:</Card.Description>
-              <Card.Description>Low:</Card.Description>
-              <Card.Description>Precipitation:</Card.Description>
-              <Card.Description>Humidity:</Card.Description>
-            </Card.Content>
-            <Card.Content extra>
-              <Icon name="user" />
-              <a href="https://iq.swackett.com/app/web/engine">
-                {/* change icon and send to new tab */}
-                What should I wear?
-              </a>
-            </Card.Content>
-          </Card>
-        </Grid.Column>
-      </Grid.Row>
-    </Grid>
-=======
     <div id="today" className="today-gradient">
       <Header
         as="h1"
@@ -46,7 +69,7 @@ const Today = props => {
           <Segment>
             <List>
               <div className="cardHeaderTemp">
-                <Header size="huge">Average: 88</Header>
+                <Header size="huge">Atlanta</Header>
                 {/* <Icon name="sun outline" size="huge" /> */}
               </div>
               <br />
@@ -55,7 +78,7 @@ const Today = props => {
                 <List.Content>
                   <List.Header>High</List.Header>
                   <List.Description>
-                    Insert the high temperature here
+                  {(this.state.temp2max + this.state.temp3) / 2}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -64,7 +87,7 @@ const Today = props => {
                 <List.Content>
                   <List.Header>Low</List.Header>
                   <List.Description>
-                    Insert the low temperature here
+                    {this.state.temp2min}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -72,14 +95,7 @@ const Today = props => {
                 <Icon name="h" />
                 <List.Content>
                   <List.Header>Humidity</List.Header>
-                  <List.Description>example</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item as="a">
-                <Icon name="product hunt" />
-                <List.Content>
-                  <List.Header>Precipitation</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{(this.state.humidity2 + this.state.humidity3) / 2}</List.Description>
                 </List.Content>
               </List.Item>
               <Icon name="user" />
@@ -96,7 +112,7 @@ const Today = props => {
             <List>
               <div className="cardHeaderTemp">
                 <Header size="huge" style={{ margin: 0 }}>
-                  88
+                  DarkSky
                 </Header>
                 <Icon name="sun outline" size="huge" />
               </div>
@@ -106,7 +122,7 @@ const Today = props => {
                 <List.Content>
                   <List.Header>High</List.Header>
                   <List.Description>
-                    Insert the high temperature here
+                  {this.state.tempmax}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -115,7 +131,7 @@ const Today = props => {
                 <List.Content>
                   <List.Header>Low</List.Header>
                   <List.Description>
-                    Insert the low temperature here
+                  {this.state.tempmin}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -123,14 +139,14 @@ const Today = props => {
                 <Icon name="h" />
                 <List.Content>
                   <List.Header>Humidity</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{this.state.humidity}</List.Description>
                 </List.Content>
               </List.Item>
               <List.Item as="a">
                 <Icon name="product hunt" />
                 <List.Content>
                   <List.Header>Precipitation</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{this.state.precip}</List.Description>
                 </List.Content>
               </List.Item>
               <br />
@@ -143,7 +159,7 @@ const Today = props => {
             <List>
               <div className="cardHeaderTemp">
                 <Header size="huge" style={{ margin: 0 }}>
-                  88
+                  OpenWeatherMap
                 </Header>
                 <Icon name="sun outline" size="huge" />
               </div>
@@ -153,7 +169,7 @@ const Today = props => {
                 <List.Content>
                   <List.Header>High</List.Header>
                   <List.Description>
-                    Insert the high temperature here
+                  {this.state.temp2max}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -162,7 +178,7 @@ const Today = props => {
                 <List.Content>
                   <List.Header>Low</List.Header>
                   <List.Description>
-                    Insert the low temperature here
+                  {this.state.temp2min}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -170,14 +186,7 @@ const Today = props => {
                 <Icon name="h" />
                 <List.Content>
                   <List.Header>Humidity</List.Header>
-                  <List.Description>example</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item as="a">
-                <Icon name="product hunt" />
-                <List.Content>
-                  <List.Header>Precipitation</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{this.state.humidity2}</List.Description>
                 </List.Content>
               </List.Item>
               <br />
@@ -190,7 +199,7 @@ const Today = props => {
             <List>
               <div className="cardHeaderTemp">
                 <Header size="huge" style={{ margin: 0 }}>
-                  88
+                  APIxu
                 </Header>
                 <Icon name="sun outline" size="huge" />
               </div>
@@ -198,18 +207,9 @@ const Today = props => {
               <List.Item as="a">
                 <Icon name="arrow up" />
                 <List.Content>
-                  <List.Header>High</List.Header>
+                  <List.Header>Fahrenheit</List.Header>
                   <List.Description>
-                    Insert the high temperature here
-                  </List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item as="a">
-                <Icon name="arrow down" />
-                <List.Content>
-                  <List.Header>Low</List.Header>
-                  <List.Description>
-                    Insert the low temperature here
+                    {this.state.temp3}
                   </List.Description>
                 </List.Content>
               </List.Item>
@@ -217,14 +217,7 @@ const Today = props => {
                 <Icon name="h" />
                 <List.Content>
                   <List.Header>Humidity</List.Header>
-                  <List.Description>example</List.Description>
-                </List.Content>
-              </List.Item>
-              <List.Item as="a">
-                <Icon name="product hunt" />
-                <List.Content>
-                  <List.Header>Precipitation</List.Header>
-                  <List.Description>example</List.Description>
+                  <List.Description>{this.state.humidity3}</List.Description>
                 </List.Content>
               </List.Item>
               <br />
@@ -234,8 +227,8 @@ const Today = props => {
         </Grid.Column>
       </Grid>
     </div>
->>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
   );
+}
 };
 
 export default Today;

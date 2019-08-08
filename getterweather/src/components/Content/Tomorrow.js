@@ -1,16 +1,12 @@
 import React from "react";
-import { Grid, Image } from "semantic-ui-react";
-import { Icon } from "semantic-ui-react";
+import ReactDOM from "react-dom";
+import { Header, Grid, Image, Segment, Icon, List } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
+import axios from "axios";
+
 
 const Tomorrow = props => {
   return (
-<<<<<<< HEAD
-    <div>
-      <Grid centered columns={2} className="hello">
-        <Grid.Column>
-          <Icon name="sun" size="massive" />
-          85
-=======
     <div id="tomorrow" className="tomorrow-gradient">
       <Header
         as="h1"
@@ -210,7 +206,6 @@ const Tomorrow = props => {
               <br />
             </List>
           </Segment>
->>>>>>> 68a416d078416fd8531726ec33a4c1fbcc524e3b
         </Grid.Column>
       </Grid>
     </div>
