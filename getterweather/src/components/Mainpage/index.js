@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Navbar from "../Navbar";
 import Content from "../Content";
-import Footer from "../Footer";
 
 export default class index extends Component {
   render() {
@@ -9,7 +8,6 @@ export default class index extends Component {
       <div id="mainWrapper">
         <Navbar />
         <Content />
-        <Footer />
       </div>
     );
   }
