@@ -29,7 +29,9 @@ class Today extends Component {
       humidity2: null,
       city3: null,
       temp3: null,
-      humidity3: null
+      humidity3: null,
+      openFeelslike: null,
+      accuFeelslike: null
     };
   };
 
@@ -47,6 +49,7 @@ class Today extends Component {
      .then(response => response.json())
      .then(response => this.setState({
        city2: response.name,
+       openFeelslike: response.main.temp,
        temp2max: response.main.temp_max,
        temp2min: response.main.temp_min,
        humidity2: response.main.humidity
@@ -57,7 +60,8 @@ class Today extends Component {
      .then( response => this.setState({
        city: "Atlanta",
        tempmax: response.DailyForecasts[0].Temperature.Maximum.Value,
-       tempmin: response.DailyForecasts[0].Temperature.Minimum.Value
+       tempmin: response.DailyForecasts[0].Temperature.Minimum.Value,
+       accuFeelslike: (((response.DailyForecasts[0].Temperature.Maximum.Value) + (response.DailyForecasts[0].Temperature.Minimum.Value))/2),
      }));
 }
 
@@ -152,7 +156,7 @@ render() {
                       margin: 0
                     }}
                   >
-                    88
+                    {this.state.temp3}
                   </Header>
                   <Image src={sunnyImage} size="tiny" />
               </div>
@@ -181,7 +185,7 @@ render() {
                     fontSize: "11px"
                   }}
                 >
-                  Source pulled from: Dark Sky
+                  Source pulled from: Apixu
                 </div>
             </List>
           </Segment>
@@ -200,7 +204,7 @@ render() {
                       margin: 0
                     }}
                   >
-                    88
+                    {this.state.openFeelslike}
                   </Header>
                   <Image src={suncloudImage} size="tiny" />
               </div>
@@ -262,7 +266,7 @@ render() {
                       margin: 0
                     }}
                   >
-                    88
+                   {this.state.accuFeelslike}
                   </Header>
                   <Image src={suncloudImage} size="tiny" />
               </div>
